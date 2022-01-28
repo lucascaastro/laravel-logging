@@ -22,6 +22,5 @@ Route::get('/', function () {
 
 Route::get('/soma/{num1}/{num2}', [
     LoggingController::class,
-    'show'
-
+    'show',
 ]);

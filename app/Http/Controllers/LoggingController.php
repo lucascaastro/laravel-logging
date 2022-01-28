@@ -49,7 +49,8 @@ class LoggingController extends Controller
     {
         $soma = $num1 + $num2;
 
-        return 'Soma feita ' . $soma;
+        logger()->info('Soma feita');
+        return $soma;
     }
 
     /**
