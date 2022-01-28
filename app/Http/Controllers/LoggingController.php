@@ -47,10 +47,10 @@ class LoggingController extends Controller
      */
     public function show($num1, $num2)
     {
-        $soma = $num1 + $num2;
+        $sub = $num1 + $num2;
 
-        logger()->info('Soma feita');
-        return $soma;
+        logger()->debug('Sub feita', ['num1' => $num1, 'num2' => $num2, 'sub' => $num1 - $num2]);
+        return $sub;
     }
 
     /**

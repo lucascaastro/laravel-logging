@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/soma/{num1}/{num2}', [
+Route::get('/sub/{num1}/{num2}', [
     LoggingController::class,
     'show',
 ]);
