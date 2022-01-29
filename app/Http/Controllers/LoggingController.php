@@ -47,10 +47,12 @@ class LoggingController extends Controller
      */
     public function show($num1, $num2)
     {
-        $sub = $num1 + $num2;
-
-        logger()->debug('Sub feita', ['num1' => $num1, 'num2' => $num2, 'sub' => $num1 - $num2]);
-        return $sub;
+        $div = $num2 / $num1;
+        if ($num2 == 0) {
+            logger()->error('Divisor zero!');
+        } else {
+            return $div;
+        }
     }
 
     /**

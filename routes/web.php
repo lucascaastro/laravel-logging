@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/sub/{num1}/{num2}', [
+Route::get('/div/{num1}/{num2}', [
     LoggingController::class,
     'show',
 ]);
