@@ -45,15 +45,26 @@ class LoggingController extends Controller
      * @param  \App\Models\Logging  $logging
      * @return \Illuminate\Http\Response
      */
+    // public function show($num1, $num2)
+    // {
+    //     if ($num2 == 0) {
+    //         logger()->error('Divisor zero!');
+    //         return false;
+    //     } else {
+    //         return $num1 / $num2;
+    //     }
+    // }
+
     public function show($num1, $num2)
     {
-        if ($num2 == 0) {
-            logger()->error('Divisor zero!');
+        if ($num1 < 0 || $num2 < 0) {
+            logger()->warning('Negativo');
             return false;
         } else {
-            return $num1 / $num2;
+            return true;
         }
     }
+
 
     /**
      * Show the form for editing the specified resource.

@@ -24,3 +24,9 @@ Route::get('/div/{num1}/{num2}', [
     LoggingController::class,
     'show',
 ]);
+
+
+Route::get('/mult/{num1}/{num2}', [
+    LoggingController::class,
+    'show',
+]);
