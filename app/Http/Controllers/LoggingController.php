@@ -49,6 +49,7 @@ class LoggingController extends Controller
     {
         if ($num2 == '0') {
             logger()->error('Divisor zero');
+            return false;
         } else {
             return $num1 / $num2;
         }
