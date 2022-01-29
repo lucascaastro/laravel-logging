@@ -51,7 +51,8 @@ class LoggingController extends Controller
             logger()->error('Divisor zero!');
             return false;
         } else {
-            return logger()->info('Div feita');
+            logger()->info('Div feita');
+            return $num1 / $num2;
         }
     }
 
