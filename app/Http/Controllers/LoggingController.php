@@ -47,11 +47,10 @@ class LoggingController extends Controller
      */
     public function show($num1, $num2)
     {
-        $div = $num2 / $num1;
-        if ($num2 == 0) {
-            logger()->error('Divisor zero!');
+        if ($num2 == '0') {
+            logger()->error('Divisor zero');
         } else {
-            return $div;
+            return $num1 / $num2;
         }
     }
 
